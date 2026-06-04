@@ -24,34 +24,61 @@ FROM retail_sales_dataset
 GROUP BY Gender
 HAVING AVG(`Total Amount`) >300;
 
-
 -- 3. Find the top 5 customers with the highest total spending. 
-SELECT*
+SELECT `Customer ID`,
+        `Total Amount`
 FROM retail_sales_dataset
 ORDER BY `Total Amount`DESC
 LIMIT 5;
 
-
-
 -- 4. Which product categories have more than 300 transactions? 
-SELECT
+SELECT `Product Category`,
+       COUNT(`TRANSACTION ID`) AS Total_transactions
+FROM retail_sales_dataset
+GROUP BY `PRODUCT CATEGORY`
+HAVING COUNT(`TRANSACTION ID`);
 
 -- 5. What is the highest sale amount recorded for each product category? 
-
+SELECT *
+FROM retail_sales_dataset
+Order BY `Total Amount` DESC
+LIMIT 1;
 
 -- 6. Find the minimum sale amount for each gender. 
-
+SELECT Gender,
+       MIN(`Total Amount`) AS MIN_Sale_Amount
+FROM retail_sales_dataset
+GROUP BY Gender;
 
 -- 7. Show categories where the average quantity sold is greater than 2. 
-
+SELECT `Product Category`,
+       AVG(Quantity) AS AVG_quantity
+FROM retail_sales_dataset
+GROUP BY `Product Category`
+HAVING AVG(Quantity) >2;
 
 -- 8. Find the total sales for customers aged between 25 and 40 who purchased Beauty or Clothing products.
-
+SELECT SUM(`Total Amount`)
+FROM retail_sales_dataset
+WHERE Age BETWEEN 25 AND 40
+AND `Product Category` IN('Beauty','Clothing');
 
 -- 9. Which product categories have a maximum sale amount greater than 1000?
-
+SELECT `Product Category`,
+       MAX(`Total Amount`)
+FROM retail_sales_dataset
+GROUP BY `Product Category`
+HAVING MAX(`Total Amount`) >1000
 
 -- 10. Show the top 3 categories by average sales value, excluding customers under 25.
+SELECT `Product Category`,
+       AVG(`Total Amount`) AS Avg_Sales
+FROM retail_sales_dataset
+WHERE Age >= 25
+GROUP BY `Product Category`
+ORDER BY Avg_Sales DESC
+LIMIT 3;
+
 
 
 --Display all records in the retail sales table.
