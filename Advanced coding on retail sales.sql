@@ -52,3 +52,25 @@ SELECT
 
 
 -- 10. Show the top 3 categories by average sales value, excluding customers under 25.
+
+
+--Display all records in the retail sales table.
+--Display only the Customer_ID and Product_Category columns. 
+--Display all Electronics sales transactions. 
+--Display customers who are older than 40 years. 
+--Display transactions where the quantity purchased is 3 or more. 
+--Display Beauty product sales where the total amount is greater than 100.
+--Display customers whose ages are between 25 and 35. 
+--Calculate the total sales amount for all transactions. 
+--Calculate the average age of all customers. 
+--Find the highest sale amount recorded. 
+--Count the total number of transactions. 
+--Calculate total sales for each product category. 
+--Calculate the average age for each gender. 
+--Display all transactions from highest to lowest sales amount. 
+--Display all customers from youngest to oldest.  
+--Display product categories whose total sales exceed 50,000. 
+--Display genders with more than 400 transactions.  
+--Display the first 10 records from the table. 
+--Display the top 5 highest sales transactions. 
+--Display the top 3 product categories by total sales where sales exceed 10,000.

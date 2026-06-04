@@ -191,3 +191,27 @@ WHERE Age BETWEEN 25 AND 35;
 --Calculate the total sales amount for all transactions
 SELECT SUM(`Total Amount`) AS Total_sales
 FROM retail_sales_dataset;
+
+-- COMMAND ----------
+
+-- MAGIC %md
+-- MAGIC --Display all records in the retail sales table.
+-- MAGIC --Display only the Customer_ID and Product_Category columns. 
+-- MAGIC --Display all Electronics sales transactions. 
+-- MAGIC --Display customers who are older than 40 years. 
+-- MAGIC --Display transactions where the quantity purchased is 3 or more. 
+-- MAGIC --Display Beauty product sales where the total amount is greater than 100.
+-- MAGIC --Display customers whose ages are between 25 and 35. 
+-- MAGIC --Calculate the total sales amount for all transactions. 
+-- MAGIC --Calculate the average age of all customers. 
+-- MAGIC --Find the highest sale amount recorded. 
+-- MAGIC --Count the total number of transactions. 
+-- MAGIC --Calculate total sales for each product category. 
+-- MAGIC --Calculate the average age for each gender. 
+-- MAGIC --Display all transactions from highest to lowest sales amount. 
+-- MAGIC --Display all customers from youngest to oldest.  
+-- MAGIC --Display product categories whose total sales exceed 50,000. 
+-- MAGIC --Display genders with more than 400 transactions.  
+-- MAGIC --Display the first 10 records from the table. 
+-- MAGIC --Display the top 5 highest sales transactions. 
+-- MAGIC --Display the top 3 product categories by total sales where sales exceed 10,000.
